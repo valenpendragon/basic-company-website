@@ -2,6 +2,7 @@ import streamlit as st
 import pandas
 import os
 import openpyxl
+from email_control import send_email
 
 with st.form(key="email form"):
     user_email = st.text_input("Your Email Address")
@@ -24,4 +25,5 @@ From: {user_email}
 Topic {topic_choice}
 {raw_msg}
 """
-        print(message)
+        send_email(message)
+        st.info("Your message was sent successfully.")
