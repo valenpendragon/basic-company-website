@@ -18,7 +18,7 @@ with st.form(key="email form"):
     raw_msg = st.text_area("Your Message")
     button = st.form_submit_button("Submit")
     if button:
-        message = f"""
+        message = f"""\
 Subject: New contact email from {user_email} on topic {topic_choice} via Company Website
 
 From: {user_email}
